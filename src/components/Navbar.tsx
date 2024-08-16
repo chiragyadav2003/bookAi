@@ -59,20 +59,10 @@ const Navbar: React.FC = () => {
             <a href="#" className="text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Pricing</a>
             <a href="#" className="text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Documentation</a>
           </div>
-          <div className="pt-4 pb-3 border-t border-gray-700">
-            <div className="flex items-center px-5">
-              <button
-                onClick={toggleTheme}
-                className="ml-auto bg-gray-200 dark:bg-gray-600 flex-shrink-0 p-1 rounded-full text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? '🌙' : '☀️'}
-              </button>
-            </div>
-          </div>
         </div>
-      )}
-    </nav>
+      )
+      }
+    </nav >
   );
 };
 

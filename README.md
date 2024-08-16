@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# Particle Background Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application that showcases a particle background effect using `react-tsparticles`. The project includes a Navbar, a Pricing Section, and a particle animation that renders in the background, adding a modern aesthetic to the web page.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Particle Background:** A dynamic particle effect running smoothly in the background using `react-tsparticles`.
+- **Responsive Design:** The UI is responsive and adapts to different screen sizes, providing a seamless experience on both desktop and mobile devices.
+- **Dark Mode:** Supports light and dark themes, enhancing usability and accessibility.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** : A JavaScript library for building user interfaces.
+- **TypeScript** : Provides type safety and better developer experience.
+- **Tailwind CSS** : A utility-first CSS framework for rapidly building custom designs.
+- **tsparticles** : A lightweight library for creating animated particle backgrounds.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js (v14.x or higher)
+- npm or yarn
+
+## Project Structure
+
+```
+  ├── public
+  │ └── index.html
+  ├── src
+  │ ├── components
+  │ │ ├── darkParticleBackground.tsx
+  │ │ ├── lightParticleBackground.tsx
+  │ │ ├── Navbar.tsx
+  │ │ ├── PricingSection.tsx
+  │ │ └── ParticleBackground.tsx
+  │ ├── contexts
+  │ │ └── ThemeContext.tsx
+  │ ├── App.tsx
+  │ ├── index.css
+  │ └── main.tsx
+  ├── package.json
+  ├── tailwind.config.js
+  └── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- components: Contains the React components like Navbar, PricingSection, and ParticleBackground.
+- contexts: Includes context providers like ThemeContext for managing global state.
+- styles: Houses global styles and configurations.
+- App.tsx: The main component that ties everything together.
+- index.tsx: Entry point of the application.
